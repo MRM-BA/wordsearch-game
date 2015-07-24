@@ -5,10 +5,23 @@
     font-family: 'Futura-Bold';
 }
 
-#containerVideo{
-    display: none;  
+#containerVideo{    
+    height: 0;
+    width: 0;
+    opacity: 0;  
     max-width: 1000px;
     width: 100%;
+    padding-top: 60px;
+    -moz-transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+#containerVideo.showVideo{
+    opacity: 1;
+    height: initial;
+    width: initial;
 }
 
 #containerVideo video{
@@ -78,6 +91,7 @@
     text-transform: uppercase;
     color: #d15357;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .link a:hover {
@@ -121,7 +135,7 @@
     #rf-searchgamecontainer table {
         padding: 20px 0;
     }
-    .link a {
+    .link a {        
         font-size: 16px;
     }
 }

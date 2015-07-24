@@ -1398,12 +1398,10 @@
 
     $(document).ready(function() {
 
-        $("#boton").click(function() {
-            $("#containerVideo").show("slide");
-        });
-
+       
         $('.fancybox').click(function() {
-            console.log('algo');
+            $('#containerGrid').hide();
+            $('#containerVideo').addClass('showVideo');
             //$('#containModal').show();
             $('#modal').addClass('active');
             $('#modal video').trigger('play');
@@ -1466,7 +1464,8 @@
                 count++;
 
                 $('#containerGrid').hide();
-                $('#containerVideo').show("slow");
+                $('#containerVideo').addClass('showVideo');
+                //$('#containerVideo').show("slow");
                 /* $('#containModal').show("slow");
                  $('#modal').addClass('active');
                  $('#modal video').trigger('play');*/
