@@ -5,6 +5,18 @@
     font-family: 'Futura-Bold';
 }
 
+#containerVideo{
+    display: none;  
+    max-width: 1000px;
+    width: 100%;
+}
+
+#containerVideo video{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 
 /* Style for grid cells */
 
@@ -78,10 +90,10 @@
     }
     .rf-tgrid {
         font-size: 32px;
-        -moz-transition: all 3s ease;
-        -webkit-transition: all 3s ease;
-        -o-transition: all 3s ease;
-        transition: all 3s ease;
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
     }
 }
 

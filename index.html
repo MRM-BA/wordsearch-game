@@ -9,19 +9,29 @@
         <link rel="stylesheet" type="text/css" href="css/styles.wordsearchgame.css" media="screen" />
     </head>
     <body>
-        <div id="theGrid" class="container"></div>
-        <div class="container link"><a class='fancybox fancybox.iframe' href='#modal'>I&prime;M IN A RUSH - JUST SHOW ME THE VIDEO</a></div><br/><br/>
-		<div id="onWordSearchComplete"></div>
-		<div id="onWordFound"></div>
-		<!--<a class='fancybox fancybox.iframe' href='wordsearch.mp4' data-width='320' data-height='240'>Video #1</a>-->
+    	<div id="containerGrid">
+	        <div id="theGrid" class="container"></div>
+	        <div class="container link"><a class='fancybox fancybox.iframe'>I&prime;M IN A RUSH - JUST SHOW ME THE VIDEO</a></div><br/><br/>
+			<div id="onWordSearchComplete"></div>
+			<div id="onWordFound"></div>
+		</div>
 
-		
+		<div class="container" style="max-width:1000px;">
+			<div id="containerVideo">
+		        <video class="embed-responsive-item">
+			        <source src="/content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type="video/mp4">
+			    </video>
+			</div>
+		</div>
+
+		<!--<button id="boton">Show it</button>-->
+		<!--
 		<div id="containModal">
 			<div id="modal">
 				<div class="modal-content">
 					<!--<div class="header">
 						<h2>Modal Heading</h2>
-					</div>-->
+					</div>--><!--
 					<div class="copy">
 						<video class="embed-responsive-item">
 					        <source src="/content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type="video/mp4">
@@ -34,6 +44,6 @@
 				<div class="overlay"></div>
 			</div>
 		</div>
-	
+		-->
     </body>
 </html>

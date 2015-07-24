@@ -1398,14 +1398,18 @@
 
     $(document).ready(function() {
 
+        $("#boton").click(function() {
+            $("#containerVideo").show("slide");
+        });
+
         $('.fancybox').click(function() {
             console.log('algo');
-            $('#containModal').show();
+            //$('#containModal').show();
             $('#modal').addClass('active');
             $('#modal video').trigger('play');
         })
         $('#modal .btn').click(function() {
-           
+
             $('#containModal').hide();
             $('#modal').removeClass('active');
             $('#modal video')[0].currentTime = 0;
@@ -1460,9 +1464,12 @@
 
             if ($('#rf-tablegrid .rf-selected').length > 35 && count < 1) {
                 count++;
-                $('#containModal').show();
-                $('#modal').addClass('active');
-                $('#modal video').trigger('play');
+
+                $('#containerGrid').hide();
+                $('#containerVideo').show("slow");
+                /* $('#containModal').show("slow");
+                 $('#modal').addClass('active');
+                 $('#modal video').trigger('play');*/
             }
 
             //console.log('tamanio',$('#rf-tablegrid .rf-selected').length);
