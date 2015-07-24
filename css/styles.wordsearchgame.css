@@ -1,11 +1,13 @@
-.container{
+.container {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
     font-family: 'Futura-Bold';
 }
 
+
 /* Style for grid cells */
+
 .rf-tgrid {
     color: #00748b;
     font-size: 50px;
@@ -15,63 +17,76 @@
     vertical-align: middle;
 }
 
+
 /* Style for the grid */
+
 .rf-tablestyle {
     width: 100%;
 }
 
+
 /* Style for the div containing the grid */
-#rf-searchgamecontainer{
+
+#rf-searchgamecontainer {
     padding: 96px 170px;
     font-size: 1.3em;
     text-align: center;
     text-transform: uppercase;
 }
-#rf-searchgamecontainer p{
+
+#rf-searchgamecontainer p {
     color: #DBDBDB;
     margin: 0;
 }
-#rf-searchgamecontainer table{
+
+#rf-searchgamecontainer table {
     padding: 20px 0;
 }
-#rf-searchgamecontainer table td:hover{
+
+#rf-searchgamecontainer table td:hover {
     color: #d15357;
     cursor: pointer;
 }
-#rf-searchgamecontainer a{
+
+#rf-searchgamecontainer a {
     color: #d15357;
     text-decoration: none;
 }
-#rf-searchgamecontainer a:hover{
-    text-decoration: underline;    
+
+#rf-searchgamecontainer a:hover {
+    text-decoration: underline;
 }
-.link{
+
+.link {
     text-align: center;
 }
-.link a{
+
+.link a {
     font-size: 1.3em;
     text-transform: uppercase;
     color: #d15357;
     text-decoration: none;
 }
-.link a:hover{
+
+.link a:hover {
     text-decoration: underline;
 }
 
-
-
-@media (max-width: 1603px){
-    #rf-searchgamecontainer{
-            padding: 60px 100px 10px 100px;
+@media (max-width: 1603px) {
+    #rf-searchgamecontainer {
+        padding: 60px 100px 10px 100px;
     }
     .rf-tgrid {
         font-size: 32px;
+        -moz-transition: all 3s ease;
+        -webkit-transition: all 3s ease;
+        -o-transition: all 3s ease;
         transition: all 3s ease;
     }
 }
 
-@media (max-width: 1200px){
-    #rf-searchgamecontainer{
+@media (max-width: 1200px) {
+    #rf-searchgamecontainer {
         padding: 40px 0 10px 0;
     }
     .rf-tgrid {
@@ -79,28 +94,28 @@
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     #rf-searchgamecontainer a,
-    #rf-searchgamecontainer p{
+    #rf-searchgamecontainer p {
         font-size: 16px;
     }
-    #rf-searchgamecontainer{
+    #rf-searchgamecontainer {
         padding: 20px 0;
     }
     .rf-tgrid {
         font-size: 16px;
         padding: 5px 0;
     }
-    #rf-searchgamecontainer table{
+    #rf-searchgamecontainer table {
         padding: 20px 0;
     }
-    .link a{
-    	font-size: 16px;
+    .link a {
+        font-size: 16px;
     }
 }
 
-@media (max-width: 480px){
-    #rf-searchgamecontainer{
+@media (max-width: 480px) {
+    #rf-searchgamecontainer {
         padding: 10px 0px;
     }
     .rf-tgrid {
@@ -113,8 +128,8 @@
 /* ------------------------------------------ */
 
 
-
 /* Style for the div containing the word list */
+
 #rf-wordcontainer {
     border: 2px solid gold;
     -moz-border-radius: 20px;
@@ -123,16 +138,18 @@
     border-radius: 20px;
     cursor: pointer;
     float: left;
-    margin : 1em 1em 1em 0;
+    margin: 1em 1em 1em 0;
     padding-right: 50px;
     display: none;
 }
 
+
 /* Style for the words that have been found */
+
 .rf-foundword {
-    color : lightgray;
-    font-style : italic;
-    text-decoration : line-through;
+    color: lightgray;
+    font-style: italic;
+    text-decoration: line-through;
 }
 
 #rf-tablegrid .rf-highlight {
@@ -142,14 +159,19 @@
 #rf-tablegrid .rf-glowing {
     background: #DBDBDB;
 }
+
 #rf-tablegrid .rf-selected {
     background: #ffffff;
     color: #d15357;
 }
 
+
 /* style for words that didn't make it on the grid */
+
 .rf-pfalse {
     color: #DBDBDB;
     visibility: hidden;
 }
+
+
 /*Old jquery.fancybox.css*/
