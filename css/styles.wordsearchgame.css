@@ -1,7 +1,8 @@
 .container{
     margin: 0 auto;
-    max-width: 1920px;
+    max-width: 1200px;
     width: 100%;
+    font-family: 'Futura-Bold';
 }
 
 /* Style for grid cells */
@@ -61,16 +62,17 @@
 
 @media (max-width: 1603px){
     #rf-searchgamecontainer{
-        padding: 60px 100px;
+            padding: 60px 100px 10px 100px;
     }
     .rf-tgrid {
         font-size: 32px;
+        transition: all 3s ease;
     }
 }
 
 @media (max-width: 1200px){
     #rf-searchgamecontainer{
-        padding: 40px 0;
+        padding: 40px 0 10px 0;
     }
     .rf-tgrid {
         font-size: 24px;
@@ -91,6 +93,9 @@
     }
     #rf-searchgamecontainer table{
         padding: 20px 0;
+    }
+    .link a{
+    	font-size: 16px;
     }
 }
 
