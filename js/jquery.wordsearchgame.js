@@ -599,7 +599,7 @@
         }
 
         this.fillGrid = function() {
-            
+
             for (var i = 0; i < 10; i++) {
                 for (var j = 0; j < 17; j++) {
                     if (this.cells[i][j].isUnwritten()) {
@@ -612,19 +612,17 @@
 
     } //Grid
 
-    
-    
+
 
     var variableGlobal = new Array(10);
     for (var i = 0; i < 10; i++) {
         variableGlobal[i] = new Array(17);
         for (var j = 0; j < 17; j++) {
             variableGlobal[i][j] = undefined;
-            }
+        }
     }
-    
 
-   
+
 
     /*
      * Set of strategies to populate the grid.
@@ -696,7 +694,7 @@
                     c.value = chars[i];
                     this.cells[this.row][this.col + i] = c;
                     variableGlobal[this.row][this.col + i] = chars.join('');
-                   
+
                     word.containedIn(c);
                     word.isPlaced = true;
 
@@ -939,21 +937,24 @@
         //write word on grid at given location
         //also remember which cells were used for displaying the word
         this.writeWord = function() {
-            
-            var chars = word.chars;
-            var lrow = this.row;
-            var lcol = this.col;
-           // if(lrow++ != undefined){
-            for (var i = 0; i < word.size; i++) {
-                var c = new Cell();
-                c.value = chars[i];
-                variableGlobal[lrow][lcol] = chars.join('');
-                this.cells[lrow++][lcol++] = c;
-                word.containedIn(c);
-                word.isPlaced = true;           
-                
+            if (false) {
+                var chars = word.chars;
+                var lrow = this.row;
+                var lcol = this.col;
+                // if(lrow++ != undefined){
+                for (var i = 0; i < word.size; i++) {
+                    var c = new Cell();
+                    c.value = chars[i];
+                    variableGlobal[lrow][lcol] = chars.join('');
+                    this.cells[lrow++][lcol++] = c;
+                    word.containedIn(c);
+                    word.isPlaced = true;
+
+
+                }
 
             }
+
             //console.log('palabras diagonales izq',chars.join(''));
             //}
 
@@ -1093,18 +1094,22 @@
         //also remember which cells were used for displaying the word
         this.writeWord = function() {
 
-            var chars = word.chars;
-            var lrow = this.row;
-            var lcol = this.col;
-            for (var i = 0; i < word.size; i++) {
-                var c = new Cell();
-                c.value = chars[i];
-                variableGlobal[lrow][lcol] = chars.join('');
-                this.cells[lrow++][lcol--] = c;
-                word.containedIn(c);
-                word.isPlaced = true;
+            if (false) {
+                var chars = word.chars;
+                var lrow = this.row;
+                var lcol = this.col;
+                for (var i = 0; i < word.size; i++) {
+                    var c = new Cell();
+                    c.value = chars[i];
+                    variableGlobal[lrow][lcol] = chars.join('');
+                    this.cells[lrow++][lcol--] = c;
+                    word.containedIn(c);
+                    word.isPlaced = true;
+                }
+                //console.log('diagonal derecha',chars.join(''));
             }
-            //console.log('diagonal derecha',chars.join(''));
+
+
 
         }
 
@@ -1324,28 +1329,25 @@
             var cells = grid.cells;
             //console.log('cells',cells);
 
-            
+
+
+            var puzzleGrid = "<div id='rf-searchgamecontainer'><p class='title-p'>What&prime;s the big idea? The five hidden words below explain everything we&prime;re about.</p><table id='rf-tablegrid' cellspacing=0 cellpadding=0 class='rf-tablestyle'>";
+            for (var i = 0; i < 10; i++) {
+                puzzleGrid += "<tr>";
+                for (var j = 0; j < 17; j++) {
+
+
+                    if (variableGlobal[i][j] != undefined) {
+                        puzzleGrid += "<td data-foo='" + variableGlobal[i][j] + "'  class='rf-tgrid toPaint " + variableGlobal[i][j] + "'>" + cells[i][j].value + "</td>";
+                    } else {
+                        puzzleGrid += "<td  class='rf-tgrid'>" + cells[i][j].value + "</td>";
+                    }
 
 
 
-        var puzzleGrid = "<div id='rf-searchgamecontainer'><p class='title-p'>What&prime;s the big idea? The five hidden words below explain everything we&prime;re about.</p><table id='rf-tablegrid' cellspacing=0 cellpadding=0 class='rf-tablestyle'>";
-        for (var i = 0; i < 10; i++) {
-            puzzleGrid += "<tr>";
-            for (var j = 0; j < 17; j++) {
-
-
-                if(variableGlobal[i][j] != undefined){                   
-                    puzzleGrid += "<td data-foo='"+variableGlobal[i][j]+"'  class='rf-tgrid toPaint "+variableGlobal[i][j]+"'>" + cells[i][j].value + "</td>";
-                }else{
-                    puzzleGrid += "<td  class='rf-tgrid'>" + cells[i][j].value + "</td>";
-                }               
-
-
-
-                
+                }
+                puzzleGrid += "</tr>";
             }
-            puzzleGrid += "</tr>";
-        }
 
             puzzleGrid += "</table></div>";
             $(container).append(puzzleGrid);
@@ -1396,20 +1398,20 @@
 
     $(document).ready(function() {
 
-        $('.fancybox').click(function(){
+        $('.fancybox').click(function() {
             console.log('algo');
             $('#containModal').show();
             $('#modal').addClass('active');
             $('#modal video').trigger('play');
         })
-        $('#modal .btn').click(function(){
-            console.log('algo2');
+        $('#modal .btn').click(function() {
+           
             $('#containModal').hide();
             $('#modal').removeClass('active');
             $('#modal video')[0].currentTime = 0;
             $('#modal video').trigger('pause');
         })
-        
+
         var words = "INVENTION,COURAGE,COMMUNITY,CURIOSITY,KINDNESS";
         //var arrWord = aux = words.split(',');
         //var contWord = arrWord.length;
@@ -1438,9 +1440,9 @@
 
         var count = 0;
 
-        $('.toPaint').hover(function(){
+        $('.toPaint').hover(function() {
 
-            $clase = $(this).data('foo');  
+            $clase = $(this).data('foo');
 
             /*arrWord.forEach(function(value){
                 if(value == $clase){
@@ -1452,12 +1454,12 @@
             //console.log('elemeto',aux.length);
 
             Visualizer.select($(this).data('foo'));
-            $('.'+$clase).each(function(){                
+            $('.' + $clase).each(function() {
                 Visualizer.select($(this));
             });
 
-            if($('#rf-tablegrid .rf-selected').length > 35 && count < 1){
-                count ++;
+            if ($('#rf-tablegrid .rf-selected').length > 35 && count < 1) {
+                count++;
                 $('#containModal').show();
                 $('#modal').addClass('active');
                 $('#modal video').trigger('play');
@@ -1465,8 +1467,8 @@
 
             //console.log('tamanio',$('#rf-tablegrid .rf-selected').length);
 
-           
-                        
+
+
         })
 
 
