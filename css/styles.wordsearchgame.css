@@ -100,7 +100,7 @@
 
 @media (max-width: 1603px) {
     #rf-searchgamecontainer {
-        padding: 60px 100px 10px 100px;
+        padding: 60px 100px 22px 100px;
     }
     .rf-tgrid {
         font-size: 32px;
@@ -113,10 +113,22 @@
 
 @media (max-width: 1200px) {
     #rf-searchgamecontainer {
-        padding: 40px 0 10px 0;
+        padding: 40px 0 22px 0;
     }
     .rf-tgrid {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title-p{
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 900px) {
+    .title-p{
+        font-size: 1em;
     }
 }
 
