@@ -20,8 +20,8 @@
 
 #containerVideo.showVideo{
     opacity: 1;
-    height: initial;
-    width: initial;
+    height: auto;
+    width: auto;
 }
 
 #containerVideo video{

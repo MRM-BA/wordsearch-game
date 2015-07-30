@@ -1404,7 +1404,7 @@
             $('#containerVideo').addClass('showVideo');
             //$('#containModal').show();
             $('#modal').addClass('active');
-            $('#modal video').trigger('play');
+            $('#containerVideo video').trigger('play');
         })
         $('#modal .btn').click(function() {
 
@@ -1465,10 +1465,12 @@
 
                 $('#containerGrid').hide();
                 $('#containerVideo').addClass('showVideo');
+                $('#containerVideo video').trigger('play');
                 //$('#containerVideo').show("slow");
                 /* $('#containModal').show("slow");
                  $('#modal').addClass('active');
                  $('#modal video').trigger('play');*/
+                 
             }
 
             //console.log('tamanio',$('#rf-tablegrid .rf-selected').length);
