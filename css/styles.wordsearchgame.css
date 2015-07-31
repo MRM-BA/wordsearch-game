@@ -12,10 +12,10 @@
     max-width: 1000px;
     width: 100%;
     padding-top: 60px;
-    -moz-transition: all 2s ease;
-    -webkit-transition: all 2s ease;
-    -o-transition: all 2s ease;
-    transition: all 2s ease;
+    -moz-transition: all 5s ease;
+    -webkit-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    transition: all 5s ease;
 }
 
 #containerVideo.showVideo{
@@ -54,7 +54,6 @@
 /* Style for the div containing the grid */
 
 #rf-searchgamecontainer {
-    padding: 96px 170px;
     font-size: 1.3em;
     text-align: center;
     text-transform: uppercase;
@@ -100,28 +99,25 @@
 }
 
 @media (max-width: 1603px) {
-    #rf-searchgamecontainer {
-        padding: 60px 100px 22px 100px;
-    }
     .rf-tgrid {
         font-size: 32px;
-        -moz-transition: all 0s ease;
-        -webkit-transition: all 0s ease;
-        -o-transition: all 0s ease;
-        transition: all 0s ease;
+        -moz-transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
     }
 }
 
 @media (max-width: 1200px) {
-    #rf-searchgamecontainer {
-        padding: 40px 0 22px 0;
-    }
     .rf-tgrid {
         font-size: 24px;
     }
 }
 
 @media (max-width: 1024px) {
+    #rf-searchgamecontainer {
+        padding: 40px 20px 22px 20px;
+    }
     .title-p{
         font-size: 1.1em;
     }
