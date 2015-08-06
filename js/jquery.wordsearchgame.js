@@ -692,8 +692,14 @@
                 for (var i = 0; i < word.size; i++) {
                     var c = new Cell();
                     c.value = chars[i];
-                    this.cells[this.row][this.col + i] = c;
-                    variableGlobal[this.row][this.col + i] = chars.join('');
+                    this.cells[this.row][this.col + i] = c; 
+                    if(variableGlobal[this.row][this.col + i] == undefined){
+                        variableGlobal[this.row][this.col + i] = chars.join('');
+                    } else{
+                         variableGlobal[this.row][this.col + i] += " "+chars.join('');
+                    }                  
+                    
+
 
                     word.containedIn(c);
                     word.isPlaced = true;
@@ -701,7 +707,7 @@
 
                 }
 
-                //console.log('palabras horizontales',chars.join(''));
+                console.log('palabras horizontales',chars.join(''));
 
             }
 
@@ -823,11 +829,19 @@
                 var c = new Cell();
                 c.value = chars[i];
                 this.cells[this.row + i][this.col] = c; //CHANGED
-                variableGlobal[this.row + i][this.col] = chars.join('');
+                //variableGlobal[this.row + i][this.col] += chars.join('');
+
+                 if(variableGlobal[this.row + i][this.col] == undefined){
+                        variableGlobal[this.row + i][this.col] = chars.join('');
+                    } else{
+                         variableGlobal[this.row + i][this.col] += " "+chars.join('');
+                    }      
+
+
                 word.containedIn(c);
                 word.isPlaced = true;
             }
-            //console.log('palabras verticales',chars.join(''));
+            console.log('palabras verticales',chars.join(''));
 
 
         }
@@ -1348,6 +1362,8 @@
                 }
                 puzzleGrid += "</tr>";
             }
+           /*puzzleGrid += '<tr><td class="rf-tgrid">T</td><td class="rf-tgrid">K</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">I</td><td class="rf-tgrid">C</td><td class="rf-tgrid">X</td><td class="rf-tgrid">A</td><td class="rf-tgrid">V</td><td class="rf-tgrid">G</td><td class="rf-tgrid">N</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">K</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">C</td><td class="rf-tgrid">T</td><td class="rf-tgrid">R</td><td class="rf-tgrid">J</td><td class="rf-tgrid">N</td><td class="rf-tgrid">S</td><td class="rf-tgrid">T</td></tr><tr><td class="rf-tgrid">K</td><td class="rf-tgrid">E</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">N</td><td class="rf-tgrid">R</td><td class="rf-tgrid">I</td><td class="rf-tgrid">E</td><td class="rf-tgrid">L</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">F</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">I</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">U</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">Y</td><td class="rf-tgrid">D</td><td class="rf-tgrid">C</td><td class="rf-tgrid">J</td><td class="rf-tgrid">X</td></tr><tr><td class="rf-tgrid">A</td><td class="rf-tgrid">H</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">V</td><td class="rf-tgrid">T</td><td class="rf-tgrid">S</td><td class="rf-tgrid">P</td><td class="rf-tgrid">S</td><td class="rf-tgrid">N</td><td class="rf-tgrid">U</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">N</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">R</td><td class="rf-tgrid">Z</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">J</td><td class="rf-tgrid">I</td><td class="rf-tgrid">P</td><td class="rf-tgrid">R</td></tr><tr><td class="rf-tgrid">N</td><td class="rf-tgrid">A</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">E</td><td class="rf-tgrid">L</td><td class="rf-tgrid">P</td><td class="rf-tgrid">U</td><td class="rf-tgrid">M</td><td class="rf-tgrid">Y</td><td class="rf-tgrid">J</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">D</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">I</td><td class="rf-tgrid">E</td><td class="rf-tgrid">I</td><td class="rf-tgrid">A</td><td class="rf-tgrid">P</td><td class="rf-tgrid">Z</td><td class="rf-tgrid">U</td></tr><tr><td class="rf-tgrid">R</td><td class="rf-tgrid">U</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">N</td><td class="rf-tgrid">W</td><td class="rf-tgrid">E</td><td class="rf-tgrid">Y</td><td class="rf-tgrid">X</td><td class="rf-tgrid">K</td><td class="rf-tgrid">W</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">N</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">O</td><td class="rf-tgrid">Y</td><td class="rf-tgrid">A</td><td class="rf-tgrid">U</td><td class="rf-tgrid">P</td><td class="rf-tgrid">U</td><td class="rf-tgrid">V</td></tr><tr><td class="rf-tgrid">V</td><td class="rf-tgrid">L</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">T</td><td data-foo="COURAGE" class="rf-tgrid toPaint COURAGE " style="opacity: 20;">C</td><td data-foo="COURAGE" class="rf-tgrid toPaint COURAGE " style="opacity: 20;">O</td><td data-foo="COURAGE" class="rf-tgrid toPaint COURAGE " style="opacity: 20;">U</td><td data-foo="COURAGE" class="rf-tgrid toPaint COURAGE " style="opacity: 20;">R</td><td data-foo="COURAGE" class="rf-tgrid toPaint COURAGE " style="opacity: 20;">A</td><td data-foo="COURAGE" class="rf-tgrid toPaint COURAGE " style="opacity: 20;">G</td><td data-foo="COURAGE KINDNESS" class="rf-tgrid toPaint COURAGE KINDNESS " style="opacity: 20;">E</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">S</td><td class="rf-tgrid">X</td><td class="rf-tgrid">K</td><td class="rf-tgrid">V</td><td class="rf-tgrid">E</td><td class="rf-tgrid">Z</td><td class="rf-tgrid">Y</td></tr><tr><td class="rf-tgrid">A</td><td class="rf-tgrid">E</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">I</td><td class="rf-tgrid">C</td><td class="rf-tgrid">M</td><td class="rf-tgrid">C</td><td class="rf-tgrid">K</td><td class="rf-tgrid">W</td><td class="rf-tgrid">B</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">S</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">I</td><td class="rf-tgrid">H</td><td class="rf-tgrid">V</td><td class="rf-tgrid">W</td><td class="rf-tgrid">V</td><td class="rf-tgrid">A</td><td class="rf-tgrid">R</td></tr><tr><td class="rf-tgrid">N</td><td class="rf-tgrid">C</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">O</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">O</td><td class="rf-tgrid">F</td><td class="rf-tgrid">W</td><td class="rf-tgrid">H</td><td class="rf-tgrid">Y</td><td data-foo="KINDNESS" class="rf-tgrid toPaint KINDNESS " style="opacity: 20;">S</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">T</td><td class="rf-tgrid">S</td><td class="rf-tgrid">U</td><td class="rf-tgrid">U</td><td class="rf-tgrid">G</td><td class="rf-tgrid">F</td><td class="rf-tgrid">D</td></tr><tr><td class="rf-tgrid">V</td><td class="rf-tgrid">O</td><td data-foo="INVENTION" class="rf-tgrid toPaint INVENTION " style="opacity: 20;">N</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">P</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">J</td><td class="rf-tgrid">Z</td><td class="rf-tgrid">Y</td><td class="rf-tgrid">V</td><td data-foo="CURIOSITY" class="rf-tgrid toPaint CURIOSITY " style="opacity: 20;">Y</td><td class="rf-tgrid">O</td><td class="rf-tgrid">F</td><td class="rf-tgrid">Z</td><td class="rf-tgrid">E</td><td class="rf-tgrid">J</td><td class="rf-tgrid">U</td></tr><tr><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">C</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">O</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">M</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">M</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">U</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">N</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">I</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">T</td><td data-foo="COMMUNITY" class="rf-tgrid toPaint COMMUNITY " style="opacity: 20;">Y</td><td class="rf-tgrid">C</td><td class="rf-tgrid">Z</td><td class="rf-tgrid">Y</td><td class="rf-tgrid">V</td><td class="rf-tgrid">D</td><td class="rf-tgrid">Q</td><td class="rf-tgrid">I</td><td class="rf-tgrid">Q</td></tr>';*/
+
 
             puzzleGrid += "</table></div>";
             $(container).append(puzzleGrid);
@@ -1466,10 +1482,7 @@
                 $('#containerGrid').hide();
                 $('#containerVideo').addClass('showVideo');
                 $('#containerVideo video').trigger('play');
-                //$('#containerVideo').show("slow");
-                /* $('#containModal').show("slow");
-                 $('#modal').addClass('active');
-                 $('#modal video').trigger('play');*/
+              
                  
             }
 
