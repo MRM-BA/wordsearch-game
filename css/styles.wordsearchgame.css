@@ -22,6 +22,7 @@
     opacity: 1;
     height: auto;
     width: auto;
+	min-height: 842px;
 }
 
 #containerVideo video{
@@ -38,7 +39,7 @@
     color: #00748b;
     font-size: 50px;
     font-weight: 700;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
     vertical-align: middle;
 }
@@ -104,11 +105,13 @@
     }
     .rf-tgrid {
         font-size: 32px;
-        -moz-transition: all 2s ease;
+    }
+	.rf-selected{
+		-moz-transition: all 2s ease;
         -webkit-transition: all 2s ease;
         -o-transition: all 2s ease;
         transition: all 2s ease;
-    }
+	}
 }
 
 @media (max-width: 1200px) {
