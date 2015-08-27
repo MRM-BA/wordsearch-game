@@ -141,7 +141,7 @@ body, html{
 
 @media (max-width: 768px) {
     #containerVideo{
-        padding: 40px 0;
+        padding-bottom: 40px;
     }
     #rf-searchgamecontainer a,
     #rf-searchgamecontainer p {
