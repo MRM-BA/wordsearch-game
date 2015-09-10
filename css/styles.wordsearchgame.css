@@ -37,7 +37,6 @@ body, html{
 
 #video-01{
     background-color: transparent;
-    width: 100%!important /9;
 }
 
 .video-js {
@@ -56,6 +55,7 @@ body, html{
     user-select: none;
     box-sizing:border-box;
     padding-top: 0;
+    width: 100%!important;
 }
 
 .vjs-default-skin .vjs-control-bar {
