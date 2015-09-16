@@ -9,11 +9,13 @@
     <!--<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>-->
     <!--<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>-->
     <!--<script type="text/javascript" src="js/jquery.wordsearchgame.js"></script>-->
+    <!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="css/styles.wordsearchgame.css" media="screen" />
     <!--<link href="css/modal.css" rel="stylesheet">-->
-    <link href="http://pub.dev.cw-mccann.com/etc/designs/mrmwp/ui/js/video-js/video-js.css" rel="stylesheet">
+    <!--<link href="http://pub.dev.cw-mccann.com/etc/designs/mrmwp/ui/js/video-js/video-js.css" rel="stylesheet">
     
-    <script src="http://pub.dev.cw-mccann.com/etc/designs/mrmwp/ui/js/video-js/video.js"></script>
+    <script src="http://pub.dev.cw-mccann.com/etc/designs/mrmwp/ui/js/video-js/video.js"></script>-->
     <!-- Chang URLs to wherever Video.js files will be hosted -->
     <!-- <link href="css/video-js.css" rel="stylesheet" type="text/css">-->
     <!-- video.js must be in the <head> for older IEs to work. -->
@@ -29,8 +31,8 @@
 		</div>-->
     <div class="container">
         <div id="containerVideo">
-             <video id="video-01" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="auto" poster="http://pub.dev.cw-mccann.com/content/dam/commonwealth/2015-cw-site-about-uncommon-video-poster-1200x675.jpg" data-setup="{}">
-                <source src="" type='video/mp4' />                 
+             <video id="video-01" class="video-js vjs-default-skin vjs-big-play-centered" controls  width="100%" height="auto" poster="http://pub.dev.cw-mccann.com/content/dam/commonwealth/2015-cw-site-about-uncommon-video-poster-1200x675.jpg" data-setup="{}">
+                <source src="http://pub.dev.cw-mccann.com//content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type='video/mp4' />                 
             </video>
             <!--<video id="video-01" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="auto" poster="http://pub.dev.cw-mccann.com/content/dam/commonwealth/2015-cw-site-about-uncommon-video-poster-1200x675.jpg" data-setup="{}">
                 <source src="http://pub.dev.cw-mccann.com//content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type='video/mp4' />
@@ -60,11 +62,7 @@
 			</div>
 		</div>
 		-->
-        <script>
-            var videoFile = 'http://pub.dev.cw-mccann.com//content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4';
-            $('#video-01 source').attr('src', videoFile);
-            //console.log('src', $('#video-01')[0].load());
-        </script>
+        
 </body>
 
 </html>
