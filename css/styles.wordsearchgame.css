@@ -75,7 +75,8 @@ body, html{
 /* Video play button */.vjs-default-skin .vjs-big-play-button,
 .vjs-default-skin:hover .vjs-big-play-button,
 .vjs-default-skin .vjs-big-play-button:focus{
-  background: url(http://pub.dev.cw-mccann.com/etc/designs/commonwealth/images/cw_site_masthead_play_button.png)!important;
+  /*background: url(http://pub.dev.cw-mccann.com/etc/designs/commonwealth/images/cw_site_masthead_play_button.png)!important;*/
+  background: url(/etc/designs/commonwealth/images/cw_site_masthead_play_button.png)!important;
   border: 0!important;
   border-radius: 0!important;
   box-shadow: none!important;
