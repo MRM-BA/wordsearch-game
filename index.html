@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Word Search Game - Ryan Fernandes</title>
-        <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
-		<script type="text/javascript" src="js/jquery.wordsearchgame.js"></script>
-		<link href="css/modal.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/styles.wordsearchgame.css" media="screen" />
-    </head>
-    <body>
-    	<!--<div id="containerGrid">
+
+<head>
+    <title>Word Search Game - Ryan Fernandes</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" > 
+
+    <!--<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/jquery.wordsearchgame.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/styles.wordsearchgame.css" media="screen" />
+    <!--<link href="css/modal.css" rel="stylesheet">-->
+    <link href="http://pub.dev.cw-mccann.com/etc/designs/mrmwp/ui/js/video-js/video-js.css" rel="stylesheet">
+    
+    <script src="http://pub.dev.cw-mccann.com/etc/designs/mrmwp/ui/js/video-js/video.js"></script>
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <!-- <link href="css/video-js.css" rel="stylesheet" type="text/css">-->
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <!--<script src="js/video.js"></script>-->
+</head>
+
+<body>
+    <!--<div id="containerGrid">
 	        <div id="theGrid" class="container"></div>
 	        <div class="container link"><a class='fancybox fancybox.iframe'>I&prime;M IN A RUSH - JUST SHOW ME THE VIDEO</a></div><br/><br/>
 			<div id="onWordSearchComplete"></div>
 			<div id="onWordFound"></div>
 		</div>-->
-
-		<div class="container">
-			<div id="containerVideo">
-		        <video class="embed-responsive-item" controls preload="auto">
-			        <source src="/content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type="video/mp4">
-			    </video>
-			</div>
-		</div>
-
-		<!--<button id="boton">Show it</button>-->
-		<!--
+    <div class="container">
+        <div id="containerVideo">
+             <video id="video-01" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="auto" poster="http://pub.dev.cw-mccann.com/content/dam/commonwealth/2015-cw-site-about-uncommon-video-poster-1200x675.jpg" data-setup="{}">
+                <source src="" type='video/mp4' />                 
+            </video>
+            <!--<video id="video-01" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="100%" height="auto" poster="http://pub.dev.cw-mccann.com/content/dam/commonwealth/2015-cw-site-about-uncommon-video-poster-1200x675.jpg" data-setup="{}">
+                <source src="http://pub.dev.cw-mccann.com//content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type='video/mp4' />
+              
+            </video>-->
+        </div>
+    </div>
+    <!--<button id="boton">Show it</button>-->
+    <!--
 		<div id="containModal">
 			<div id="modal">
 				<div class="modal-content">
 					<!--<div class="header">
 						<h2>Modal Heading</h2>
-					</div>--><!--
+					</div>-->
+    <!--
 					<div class="copy">
 						<video class="embed-responsive-item">
 					        <source src="/content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4" type="video/mp4">
@@ -45,5 +60,11 @@
 			</div>
 		</div>
 		-->
-    </body>
+        <script>
+            var videoFile = 'http://pub.dev.cw-mccann.com//content/dam/commonwealth/2014-cw-site-about-wordsearch-uncommon-video-1920x1080.mp4';
+            $('#video-01 source').attr('src', videoFile);
+            //console.log('src', $('#video-01')[0].load());
+        </script>
+</body>
+
 </html>
